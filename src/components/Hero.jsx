@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { Button } from "./ui/Button";
 import { useTheme } from "../context/themecontext";
+import phone from "../images/phone-fintech.png";
+import { Import } from "lucide-react";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -119,7 +121,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
         >
-          EarlyPay empowers Nigerian employees with flexible wage access  giving you{" "}
+          EarlyPay empowers Nigerian employees with flexible wage access  giving you
           <span className="font-semibold text-gray-900 dark:text-white">complete control</span> over
           your money before payday.
         </motion.p>
@@ -242,7 +244,7 @@ export default function Hero() {
             }}
           >
             <img
-              src="/images/earlypay-fintech-mockup.png"
+              src={phone}
               alt="EarlyPay App Mockup"
               className="w-full rounded-2xl shadow-2xl object-contain relative z-10"
             />
