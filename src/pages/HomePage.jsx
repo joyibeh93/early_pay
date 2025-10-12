@@ -5,7 +5,7 @@ import React from "react";
 import { ThemeProvider } from "../context/themecontext";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import HowItWorks from "../components/HowItworks";
+import HowItWorks from "../components/HowItWorks";
 import About from "../components/About";
 import Benefits from "../components/Benefits";
 import Contact from "../components/Contact";
