@@ -3,7 +3,7 @@
 
 import React from "react";
 import { ThemeProvider } from "../context/themecontext";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItworks";
 import About from "../components/About";

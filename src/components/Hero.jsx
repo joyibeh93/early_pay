@@ -7,7 +7,6 @@ import Tilt from "react-parallax-tilt";
 import { Button } from "./ui/Button";
 import { useTheme } from "../context/themecontext";
 import phone from "../images/phone-fintech.png";
-import { Import } from "lucide-react";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -100,29 +99,18 @@ export default function Hero() {
 
       {/* Left Section - Text Content */}
       <motion.div className="max-w-lg lg:max-w-xl w-full z-10" variants={itemVariants}>
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium shadow-sm"
-        >
-
-        </motion.div>
-
         <motion.h1
           variants={itemVariants}
           className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 dark:from-white dark:via-blue-200 dark:to-white bg-clip-text text-transparent"
         >
-          Access Your Earned Wages Anytime,  Instantly.
+          Access Your Earned Wages Anytime, Instantly.
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
         >
-          EarlyPay empowers Nigerian employees with flexible wage access  giving you
-          <span className="font-semibold text-gray-900 dark:text-white">complete control</span> over
+          EarlyPay empowers Nigerian employees with flexible wage access giving youcomplete control over
           your money before payday.
         </motion.p>
 
@@ -216,7 +204,7 @@ export default function Hero() {
 
       {/* Right Section - Mockup with Advanced Effects */}
       <motion.div
-        className="relative mt-12 lg:mt-0 w-full max-w-[520px] flex justify-center lg:justify-end z-10"
+        className="relative mt-12 lg:mt-0 w-full max-w-[380px] lg:max-w-[420px] flex justify-center lg:justify-end z-10"
         variants={itemVariants}
         style={{ y }}
       >
