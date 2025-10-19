@@ -16,9 +16,6 @@ export default function HomePage() {
   return (
     <ThemeProvider>
       <div className="bg-white dark:bg-[#0f172a] text-gray-900 dark:text-gray-100 transition-all duration-300 overflow-x-hidden min-h-screen">
-        {/* Navbar */}
-        <Navbar />
-
         {/* Hero Section */}
         <Hero />
 
