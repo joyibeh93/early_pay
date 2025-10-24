@@ -34,11 +34,25 @@ export default function Dashboard() {
   };
 
   // Mock bank accounts
-  const bankAccounts = [
+  const [bankAccounts, setBankAccounts] = useState([
     { id: 1, name: "Access Bank", number: "**** **** **** 1234" },
     { id: 2, name: "GTBank", number: "**** **** **** 5678" },
     { id: 3, name: "First Bank", number: "**** **** **** 9012" },
-  ];
+  ]);
+
+  // Function to add new bank account
+  const handleAddBank = (newBankData) => {
+    const newBank = {
+      id: bankAccounts.length + 1,
+      name: newBankData.bankName,
+      number: `**** **** **** ${newBankData.accountNumber.slice(-4)}`,
+      fullAccountNumber: newBankData.accountNumber,
+      accountName: newBankData.accountName,
+    };
+    setBankAccounts([...bankAccounts, newBank]);
+    setSelectedBank(newBank.id.toString());
+    alert(`Bank account added successfully! ${newBankData.bankName} - ${newBankData.accountName}`);
+  };
 
   // Mock transaction history
   const [transactions, setTransactions] = useState([

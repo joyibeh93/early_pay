@@ -18,7 +18,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUpPage() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // ← Already added
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -34,6 +34,7 @@ export default function SignUpPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState(""); // ← Add this
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -88,6 +89,7 @@ export default function SignUpPage() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // ← Updated handleSubmit function
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -95,9 +97,17 @@ export default function SignUpPage() {
       setIsSubmitting(true);
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
+
       console.log("Form submitted:", formData);
-      setIsSubmitting(false);
-      // Redirect to dashboard or show success message
+
+      // Show success message
+      setSuccessMessage("Account created successfully! Redirecting to dashboard...");
+
+      // Redirect to dashboard after 1.5 seconds
+      setTimeout(() => {
+        setIsSubmitting(false);
+        navigate("/dashboard");
+      }, 1500);
     }
   };
 
@@ -201,6 +211,20 @@ export default function SignUpPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Success Message - ADD THIS */}
+            {successMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 flex items-center gap-3"
+              >
+                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <p className="text-sm text-green-800 dark:text-green-200 font-medium">
+                  {successMessage}
+                </p>
+              </motion.div>
+            )}
+
             {/* Full Name */}
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
