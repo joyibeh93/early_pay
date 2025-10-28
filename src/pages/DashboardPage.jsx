@@ -271,6 +271,7 @@ export default function Dashboard() {
           formatCurrency={formatCurrency}
           bankAccounts={bankAccounts}
           onSubmit={handleWithdrawal}
+          onAddBank={handleAddBank}
           itemVariants={itemVariants}
         />
 
