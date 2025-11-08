@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, Menu, X, LogIn, UserPlus } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "./ui/Button";
-import { useTheme } from "../context/themecontext";
+import { Button } from "../ui/Button";
+import { useTheme } from "../../context/themecontext";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();

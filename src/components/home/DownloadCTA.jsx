@@ -3,7 +3,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "../context/themecontext";
+import { useTheme } from "../../context/themecontext";
 
 export default function DownloadCTA() {
   const { theme } = useTheme();

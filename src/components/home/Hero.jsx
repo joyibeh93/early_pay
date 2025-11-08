@@ -4,9 +4,9 @@
 import React, { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import { Button } from "./ui/Button";
-import { useTheme } from "../context/themecontext";
-import phone from "../images/phone-fintech.png";
+import { Button } from "../ui/Button";
+import { useTheme } from "../../context/themecontext";
+import phone from "../../images/phone-fintech.png";
 
 export default function Hero() {
   const { theme } = useTheme();

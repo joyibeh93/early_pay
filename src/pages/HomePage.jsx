@@ -3,14 +3,15 @@
 
 import React from "react";
 import { ThemeProvider } from "../context/themecontext";
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import HowItWorks from "../components/HowItWorks";
-import About from "../components/About";
-import Benefits from "../components/Benefits";
-import Contact from "../components/Contact";
-import DownloadCTA from "../components/DownloadCTA";
-import Footer from "../components/Footer";
+import Navbar from "../components/home/Navbar";
+// import Sidebar from "../components/home/Sidebar";
+import Hero from "../components/home/Hero";
+import HowItWorks from "../components/home/HowItWorks";
+import About from "../components/home/About";
+import Benefits from "../components/home/Benefits";
+import Contact from "../components/home/Contact";
+import DownloadCTA from "../components/home/DownloadCTA";
+import Footer from "../components/home/Footer";
 
 export default function HomePage() {
   return (
