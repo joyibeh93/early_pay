@@ -9,7 +9,7 @@ const HRStats = () => (
         <span className="text-2xl font-bold text-gray-900 dark:text-white">248</span>
       </div>
       <p className="text-gray-600 dark:text-gray-400 text-sm">Total Employees</p>
-    </div>
+    </div> 
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
       <div className="flex items-center justify-between mb-2">
         <Clock className="text-green-600" size={24} />
